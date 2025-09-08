@@ -1,0 +1,35 @@
+.view_edit_form_box { padding: 20px; max-width: 960px; width: 100% !important; background-color: white; margin: 20px auto !important; border-radius: 2px; border-bottom: 0px solid transparent !important; text-align: left; }
+.view_edit_form_box .row { padding-top: 5px !important; clear: both; }
+.view_edit_form_box .form-group { padding-top: 10px !important; padding-right: 20px !important; }
+.view_edit_form_box label { display: block; }
+.view_edit_form_box input[type=text], .view_edit_form_box input[type=password], .view_edit_form_box input[type=email], .view_edit_form_box input[type=phone], .view_edit_form_box input[type=number], .view_edit_form_box input[type=datetime-local] { height: 34px; width: 100%; }
+.view_edit_form_box input[type=number] { max-width: 100px; }
+.view_edit_form_box input[type=checkbox] { margin-right: 10px !important; }
+.view_edit_form_box input[type=datetime], .view_edit_form_box input[type=datetime-local] { max-width: 190px; }
+.view_edit_form_box textarea { width: 100% !important; height: 120px; }
+.view_edit_form_box legend { width: unset; margin: 0; padding: 0 8px; border: 1px solid #ccc; border-radius: 4px; }
+.view_edit_form_box .checkbox { margin-top: 5px !important; }
+.view_edit_form_box .checkbox label { font-weight: 700 !important; }
+.view_edit_form_box .erroneous { border: 1px solid red; }
+.view_edit_form_box input.changed { border: 1px solid black; }
+
+.view_edit_form_box .view_edit_image_file { display: none; opacity: 0; }
+.view_edit_form_box .view_edit_image_id { display: none; opacity: 0; }
+.view_edit_form_box .view_edit_image_upload { position: absolute; display: none; top: 5px; left: 5px; background-color: rgba(255, 255, 255, 0.75); border-radius: 3px; cursor: pointer; }
+.view_edit_form_box .view_edit_image_upload:hover { background-color: white; }
+.view_edit_form_box .view_edit_image_clear { position: absolute; display: none; top: 5px; right: 5px; background-color: rgba(255, 255, 255, 0.75); border-radius: 3px; cursor: pointer;}
+.view_edit_form_box .view_edit_image_clear:hover { background-color: white; }
+.view_edit_form_box .view_edit_image_container { position: relative; width: 300px; height: 300px; overflow: hidden; }
+.view_edit_form_box .remote_value_clear { display: none; }
+.view_edit_form_box .view_edit_date_time, .view_edit_form_box .view_edit_time { max-width: 130px;  padding-left: 5px; }
+.view_edit_form_box .view_edit_combo_button { display: block !important; width: 100% !important; text-align: left; line-height: 1.5em; overflow: hidden; }
+.view_edit_form_box .view_edit_combo .btn-group { display: block !important; width: 60% !important; }
+.view_edit_form_box .foreign_field_data { cursor: alias; display: inline-block; }
+.view_edit_form_box .view_edit_fieldset { border: 1px solid #ccc; border-radius: 4px; padding: 5px; }
+.view_edit_form_box .progress-wrp { position: absolute; display: none;top: 0px; left: 50px; right: 50px; border: 1px solid #0099CC; padding: 1px; height: 30px; border-radius: 3px; margin: 5px; text-align: left; background: #fff; box-shadow: inset 1px 3px 6px rgba(0, 0, 0, 0.12); }
+.view_edit_form_box .progress-wrp .progress-bar { height: 100%; border-radius: 3px; background-color: #30afff; width: 0; box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.11); }
+.view_edit_form_box .progress-wrp .status { top: 3px; left: 50%; position: absolute; display: inline-block; color: #000000; }
+.view_edit_form_box .view_edit_buttons_row { display: block; overflow: hidden; }
+.view_edit_form_box .view_edit_extra_buttons { display: block; flex: 1; text-align: left; }
+.view_edit_form_box .view_edit_standard_buttons { display: block; padding-right: 40px !important; text-align: right; }
+.view_edit_form_box .view_edit_button { display: inline-block; margin: 0 0 10px 10px; float: unset; min-width: 100px; }
