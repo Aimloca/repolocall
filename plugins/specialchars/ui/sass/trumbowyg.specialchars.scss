@@ -9,16 +9,19 @@
  *         Website : alex-d.fr
  */
 
-.trumbowyg-dropdown-emoji {
-    width: 265px;
-    padding: 7px 0 7px 5px;
-}
-
-.trumbowyg-dropdown-emoji svg {
+.trumbowyg-symbol-\&nbsp-dropdown-button {
     display: none !important;
 }
+.trumbowyg-symbol-\&nbsp-dropdown-button + button {
+    clear: both;
+}
 
-.trumbowyg-dropdown-emoji button {
+.trumbowyg-dropdown-specialChars {
+    width: 248px;
+    padding: 5px 3px 3px;
+}
+
+.trumbowyg-dropdown-specialChars button {
     display: block;
     position: relative;
     float: left;
@@ -46,7 +49,7 @@
     }
 }
 
-.trumbowyg .emoji {
+.trumbowyg .specialChars {
     width: 22px;
     height: 22px;
     display: inline-block;
