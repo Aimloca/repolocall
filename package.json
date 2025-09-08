@@ -1,53 +1,59 @@
 {
-  "name": "froala-editor",
-  "version": "4.0.12",
-  "description": "The next generation Javascript WYSIWYG HTML rich text editor made by devs for devs. High performance and modern design make it easy to use for developers and loved by users.",
-  "keywords": [
-    "froala",
-    "froala-editor",
-    "froala-wysiwyg",
-    "html",
-    "text",
-    "editor",
-    "wysiwyg",
-    "javascript-plugin",
-    "rich editor",
-    "rich text editor",
-    "rte",
-    "javascript",
-    "vanillajs"
-  ],
-  "homepage": "https://www.froala.com/wysiwyg-editor",
-  "license": "https://www.froala.com/wysiwyg-editor/pricing",
+  "name": "trumbowyg",
+  "title": "Trumbowyg",
+  "description": "A lightweight WYSIWYG editor",
+  "version": "2.25.1",
+  "main": "dist/trumbowyg.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "del": "6.0.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "6.1.0",
+    "gulp-concat": "2.6.1",
+    "gulp-header": "2.0.9",
+    "gulp-jshint": "2.1.0",
+    "gulp-livereload": "4.0.2",
+    "gulp-load-plugins": "2.0.7",
+    "gulp-minify-css": "1.2.4",
+    "gulp-newer": "1.4.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "4.1.0",
+    "gulp-size": "3.0.0",
+    "gulp-svgmin": "3.0.0",
+    "gulp-svgstore": "7.0.1",
+    "gulp-terser": "2.0.1",
+    "jquery": "^3.6.0",
+    "jshint": "2.13.0",
+    "jshint-stylish": "2.2.1",
+    "vinyl-paths": "3.0.1"
+  },
+  "peerDependencies": {
+    "jquery": ">=1.8"
+  },
+  "homepage": "http://alex-d.github.io/Trumbowyg",
+  "author": {
+    "name": "Alexandre Demode (Alex-D)",
+    "email": "contact@alex-d.fr",
+    "url": "http://alex-d.fr"
+  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/froala/wysiwyg-editor-release.git"
+    "url": "https://github.com/Alex-D/Trumbowyg.git"
   },
-  "maintainers": [
-    {
-      "name": "Froala Labs"
-    }
-  ],
-  "filename": "js/froala_editor.min.js",
-  "main": "js/froala_editor.min.js",
-  "npmName": "froala-editor",
-  "npmFileMap": [
-    {
-      "basePath": "/",
-      "files": [
-        "js/plugins/*.min.js",
-        "js/third_party/*.min.js",
-        "js/froala_editor.min.js",
-        "js/froala_editor.pkgd.min.js",
-        "js/plugins.pkgd.min.js",
-        "css/froala_editor.min.css",
-        "css/froala_editor.pkgd.min.css",
-        "css/plugins.pkgd.min.css",
-        "css/froala_style.min.css",
-        "css/plugins/*.min.css",
-        "css/third_party/*.min.css",
-        "css/themes/*.min.css"
-      ]
-    }
+  "bugs": {
+    "url": "https://github.com/Alex-D/Trumbowyg/issues"
+  },
+  "keywords": [
+    "wysiwyg",
+    "editor",
+    "rich text",
+    "contenteditable",
+    "trumbowyg"
   ]
 }

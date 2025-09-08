@@ -1,309 +1,454 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Trumbowyg by Alex-D</title>
+        <base href="/test/base/url/">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #f4f7fa;
+                font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+            }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Froala Editor Examples</title>
+            header {
+                text-align: center;
+            }
 
-  <style>
-    body {
-      line-height: 1.5;
-      font-family: sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+            .container {
+                max-width: 960px;
+                margin: 0 auto;
+            }
+
+            .dark-section {
+                background: #111;
+                color: #ddd;
+                margin-top: 50px;
+                padding: 50px 0 100px;
+            }
+
+            .dark-section .title {
+                font-weight: normal;
+                text-align: center;
+                font-size: 32px;
+                margin: 20px 0 50px;
+            }
+
+            .form-submit {
+                background: transparent;
+                border: 1px solid #555;
+                color: #ccc;
+                padding: 7px 13px;
+                margin-right: 17px;
+                float: right;
+            }
+
+            .trumbowyg {
+                margin-bottom: 32px;
+            }
+
+            h2 {
+                font-size: 26px;
+                margin-top: 0;
+            }
+
+            h1 + pre,
+            h2 + pre,
+            h3 + pre,
+            h4 + pre {
+                margin-top: -20px;
+            }
+
+            p {
+                margin-top: 0;
+            }
+        </style>
+        <link rel="stylesheet" href="/dist/ui/trumbowyg.css">
+        <link rel="stylesheet" href="/dist/plugins/colors/ui/trumbowyg.colors.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Trumbowyg examples</h1>
+
+                <p>
+                    Close an editor on clic on "Close" in top right corner. <br>
+                    To reopen an editor, double-click on his text.
+                </p>
+            </header>
+
+            <div id="default-editor">
+                <h2>This editor is the default build of Trumbowyg.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, <a href="https://alex-d.github.io/Trumbowyg/">consectetur adipisicing</a> elit. Possimus, aliquam, minima fugiat placeat provident optio nam reiciendis eius beatae quibusdam!
+                </p>
+                <p>
+                    The text is derived from Cicero's De Finibus Bonorum et Malorum (On the Ends of Goods and Evils, or alternatively [About] The Purposes of Good and Evil ). The original passage began: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit (Translation: &quot;Neither is there anyone who loves grief itself since it is grief and thus wants to obtain it&quot;).
+                </p>
+                <code><pre>
+$('#default-editor').trumbowyg();
+                </pre></code>
+            </div>
+
+            <div id="simple-editor">
+                <h2>This is a minimalist demo of Trumbowyg.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aliquam, minima fugiat placeat provident optio nam reiciendis eius beatae quibusdam!
+                </p>
+                <code><pre>
+$('#simple-editor').trumbowyg({
+    btns: ['strong', 'em', 'del']
+});
+                </pre></code>
+            </div>
+
+            <div id="upload-editor">
+                <h2>This is a minimalist demo of Trumbowyg with upload image plugin.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aliquam, minima fugiat placeat provident optio nam reiciendis eius beatae quibusdam!
+                </p>
+                <code><pre>
+$('#simple-editor').trumbowyg({
+    btns: ['strong', 'em', 'del', 'upload'],
+    btnsDef: {
+      upload: {
+        ico: 'insertImage'
+      }
     }
+});
+                </pre></code>
+            </div>
 
-    section {
-      width: 90%;
-      margin: auto;
-      padding-top: 30px;
+            <div id="flat-buttonpane">
+                <h2>All buttons of Trumbowyg are here.</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aliquam, minima fugiat placeat provident optio nam reiciendis eius beatae quibusdam!
+                </p>
+            </div>
+
+            <div id="customized-buttonpane">
+                <h2>This is a demo of Trumbowyg with a customized button pane</h2>
+                <p>
+                    The text is derived from Cicero's De Finibus Bonorum et Malorum (On the Ends of Goods and Evils, or alternatively [About] The Purposes of Good and Evil ). The original passage began: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit (Translation: &quot;Neither is there anyone who loves grief itself since it is grief and thus wants to obtain it&quot;).
+                </p>
+                <p style="text-align: center;">
+                    <img src="https://raw.githubusercontent.com/Alex-D/Trumbowyg/develop/banner.jpg" alt="Trumbowyg logo">
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, minima, asperiores libero architecto sequi fugit dolore sunt in officiis facere ut quaerat ullam laudantium delectus aliquam tenetur alias! Ea, nisi, est earum temporibus dolores quas qui repellendus aliquid voluptatibus tempore facilis eligendi omnis reiciendis nihil ullam quo dolorem nam deleniti. Fugit dignissimos dolorum dolore voluptate repudiandae recusandae debitis. Neque, adipisci, maiores magni aliquam molestiae ex natus minus quod tempora nemo debitis eum laboriosam voluptatum ut architecto animi nobis vero quis dolore eaque! Corporis, dolore, illum, autem in eum ea doloribus ut consequuntur modi et ullam adipisci blanditiis corrupti ab voluptate.
+                </p>
+                <p>
+                    It is not known exactly when the text acquired its current standard form; it may have been as late as the 1960s. The passage was discovered by Richard McClintock, a Latin scholar who is the publications director at Hampden-Sydney College in Virginia, by searching for citings of the rarely used word 'consectetur' in classical literature.
+                </p>
+                <code><pre>
+/* Add new words for customs btnsDef just below */
+$.extend(true, $.trumbowyg.langs, {
+fr: {
+    align: 'Alignement',
+    image: 'Image'
+}
+});
+$('#customized-buttonpane').trumbowyg({
+lang: 'fr',
+fixedBtnPane: true,
+semantic: false,
+btnsDef: {
+    // Customizables dropdowns
+    align: {
+        dropdown: ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+        ico: 'justifyLeft'
+    },
+    image: {
+        dropdown: ['insertImage', 'upload', 'base64'],
+        ico: 'insertImage'
     }
+},
+btns: ['viewHTML',
+    ['formatting'],
+    ['align'],
+    ['image'],
+    ['preformatted'],
+    'fullscreen', 'close']
+});
+                </pre></code>
+            </div>
 
-    #data-list {
-      -webkit-column-gap: 30px;
-      /* Chrome, Safari, Opera */
-      -moz-column-gap: 30px;
-      /* Firefox */
-      column-gap: 30px;
-      -webkit-column-count: 4;
-      /* Chrome, Safari, Opera */
-      -moz-column-count: 4;
-      /* Firefox */
-      column-count: 4;
-    }
+            <textarea id="form-content" cols="30" rows="10" required>
+                <h1>This editor is create from a textarea</h1>
+                <p>
+                    Even though using &quot;lorem ipsum&quot; often arouses curiosity due to its resemblance to classical Latin, it is not intended to have meaning. Where text is visible in a document, people tend to focus on the textual content rather than upon overall presentation, so publishers use lorem ipsum when displaying a typeface or design in order to direct the focus to presentation. &quot;Lorem ipsum&quot; also approximates a typical distribution of spaces in English. <br>
+                    The most common lorem ipsum text reads as follows: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <code><pre>
+$('#form-content').trumbowyg({
+    lang: 'fr',
+    mobile: true,
+    fixedBtnPane: true,
+    fixedFullWidth: true,
+    semantic: true,
+    resetCss: true,
+    autoAjustHeight: true,
+    autogrow: true
+});
+                </pre></code>
+            </textarea>
 
-    #data-list>div {
-      page-break-inside: avoid;
-    }
+            <textarea id="empty-textarea" cols="30" rows="10" required></textarea>
 
-    #data-list>div:after {
-      content: "";
-      display: block;
-      height: 20px;
-    }
+            <textarea id="disabled-textarea" cols="30" rows="10" disabled>
+                Disabled textarea
+            </textarea>
+            <button id="enable-disabled-textarea">Enable</button>
+            <button id="disable-disabled-textarea">Disable</button>
 
-    h1 {
-      font-size: 36px;
-      font-weight: 300;
-      text-align: center;
-    }
+            <div id="dynamic-iframe-example"></div>
+        </div>
 
-    h2 {
-      margin: 0;
-      color: #252525;
-      border-left: 3px solid #0098f7;
-      padding-left: 10px;
-      font-weight: 400;
-    }
+        <div class="dark-section">
+            <div class="container">
+                <form action="#">
+                    <h2 class="title">The dark side of Trumbowyg</h2>
 
-    ul {
-      padding-left: 5px;
-    }
+                    <div class="trumbowyg-dark">
+                        <textarea id="placeholder-editor" cols="30" rows="10" placeholder="This is a placeholder..." required></textarea>
+                    </div>
 
-    ul li {
-      list-style: none;
-      font-size: 16px;
-    }
+                    <button type="submit" class="form-submit">Submit</button>
+                </form>
+            </div>
+        </div>
 
-    ul li a {
-      text-decoration: none;
-      color: #515151;
-    }
+        <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="/dist/trumbowyg.js"></script>
+        <script src="/dist/langs/fr.min.js"></script>
+        <script src="/dist/plugins/base64/trumbowyg.base64.js"></script>
+        <script src="/dist/plugins/colors/trumbowyg.colors.js"></script>
+        <script src="/dist/plugins/noembed/trumbowyg.noembed.js"></script>
+        <script src="/dist/plugins/pasteimage/trumbowyg.pasteimage.js"></script>
+        <script src="/dist/plugins/template/trumbowyg.template.js"></script>
+        <script src="/dist/plugins/preformatted/trumbowyg.preformatted.js"></script>
+        <script src="/dist/plugins/ruby/trumbowyg.ruby.js"></script>
+        <script src="/dist/plugins/upload/trumbowyg.upload.js"></script>
+        <script>
+            /** Default editor configuration **/
+            $('#default-editor, #empty-textarea, #disabled-textarea')
+            .trumbowyg()
+            .on('tbwinit tbwfocus tbwblur tbwchange tbwresize tbwpaste tbwopenfullscreen tbwclosefullscreen tbwclose', function(e){
+                console.log(e.type);
+            });
 
-  </style>
-</head>
+            $('#enable-disabled-textarea').click(function () {
+                $('#disabled-textarea').trumbowyg('enable');
+            });
+            $('#disable-disabled-textarea').click(function () {
+                $('#disabled-textarea').trumbowyg('disable');
+            });
 
-<body>
-  <section>
-    <h1>Froala Editor Examples</h1>
 
-    <br/>
+            /** Minimal configuration **/
+            $('#simple-editor')
+              .trumbowyg({
+                btns: ['strong', 'em', 'del']
+              });
 
-    <div id="data-list">
-      <div>
-        <h2>Popular</h2>
-        <ul>
-          <li><a href="./html/popular/full.html" title="Full Featured">Full Featured</a></li>
-          <li><a href="./html/popular/toolbar_inline.html" title="Inline Editor">Inline Editor</a></li>
-          <li><a href="./html/popular/two_instances.html" title="Multiple Editor Instances">Multiple Editor Instances</a></li>
-          <li><a href="./html/popular/textarea.html" title="Textarea Editor">Textarea Editor</a></li>
-          <li><a href="./html/popular/full_page.html" title="Full Page">Full Page</a></li>
-          <li><a href="./html/popular/iframe.html" title="Iframe">Iframe</a></li>
-          <li><a href="./html/popular/disable_edit.html" title="Non-editable Zones">Non-editable Zones</a></li>
-          <li><a href="./html/popular/z_index.html" title="Z-index">Z-index</a></li>
-          <li><a href="./html/popular/init_on_click.html" title="Init on Click">Init on Click</a></li>
-          <li><a href="./html/popular/toolbar_buttons.html" title="Change Toolbar Buttons">Change Toolbar Buttons</a></li>
-          <li><a href="./html/popular/disable_paragraphs.html" title="Disable Paragraphs">Disable Paragraphs</a></li>
-        </ul>
-      </div>
 
-      <div>
-        <h2>3rd Party Integration</h2>
-        <ul>
-          <li><a href="./html/3rd-party/bootstrap/grid.html" title="Bootstrap Grid">Bootstrap Grid</a></li>
-          <li><a href="./html/3rd-party/bootstrap/lists.html" title="Bootstrap List Group">Bootstrap List Group</a></li>
-          <li><a href="./html/3rd-party/bootstrap/modal.html" title="Bootstrap Modal">Bootstrap Modal</a></li>
-          <li><a href="./html/3rd-party/jquery/mobile.html" title="jQuery Mobile">jQuery Mobile</a></li>
-          <li><a href="./html/3rd-party/jquery/ui_modal.html" title="jQuery UI Modal">jQuery UI Modal</a></li>
-          <li><a href="./html/3rd-party/code-mirror.html" title="Code Mirror">Code Mirror</a></li>
-          <li><a href="./html/3rd-party/spell-checker/spell-checker.html" title="Spell Checker">Spell Checker</a></li>
-        </ul>
-      </div>
+            /** Minimal with upload **/
+            $('#upload-editor')
+              .trumbowyg({
+                btns: ['strong', 'em', 'del', 'upload'],
+                btnsDef: {
+                  upload: {
+                    ico: 'insertImage',
+                    title: 'insertImage'
+                  }
+                }
+              });
 
-      <div>
-        <h2>API</h2>
-        <ul>
-          <li><a href="./html/api/init_destroy.html" title="Init / Destroy Editor">Init / Destroy Editor</a></li>
-          <li><a href="./html/api/get_html.html" title="Get HTML">Get Edited HTML</a></li>
-          <li><a href="./html/api/insert_html.html" title="Insert HTML">Insert HTML</a></li>
-          <li><a href="./html/api/selection.html" title="Save / Restore Selection">Save / Restore Selection</a></li>
-          <li><a href="./html/api/live_content_preview.html" title="Live Content Preview">Live Content Preview</a></li>
-          <li><a href="./html/api/live_code_preview.html" title="Live Code Preview">Live Code Preview</a></li>
-        </ul>
-      </div>
 
-      <div>
-        <h2>International</h2>
-        <ul>
-          <li><a href="./html/international/direction_rtl.html" title="Editor Direction RTL">Editor Direction RTL</a></li>
-          <li><a href="./html/international/language.html" title="Change Language">Change Language</a></li>
-          <li><a href="./html/international/rtl_ltr_buttons.html" title="RTL / LTR Buttons">RTL / LTR Buttons</a></li>
-        </ul>
-      </div>
+            /* Add imagur parameters to upload plugin */
+            var uploadOptions = {
+                serverPath: 'https://api.imgur.com/3/image',
+                fileFieldName: 'image',
+                headers: {'Authorization': 'Client-ID 9e57cb1c4791cea'},
+                urlPropertyName: 'data.link',
+                imageWidthModalEdit: true
+            };
 
-      <div>
-        <h2>Buttons</h2>
-        <ul>
-          <li><a href="./html/buttons/custom_buttons.html" title="Custom Buttons">Custom Buttons</a></li>
-          <li><a href="./html/buttons/custom_dropdown.html" title="Custom Dropdown">Custom Dropdown</a></li>
-          <li><a href="./html/buttons/external_button.html" title="External Button">External Button</a></li>
-          <li><a href="./html/buttons/subscript_superscript.html" title="Subscript and Superscript">Subscript and Superscript</a></li>
-        </ul>
-      </div>
+            /** Full flat button pane **/
+            $('#flat-buttonpane')
+            .trumbowyg({
+                btns: [
+                    ['viewHTML'],
+                    ['p', 'blockquote', 'h1', 'h2', 'h3', 'h4'],
+                    ['strong', 'em', 'underline', 'del'],
+                    ['superscript', 'subscript'],
+                    ['createLink', 'unlink'],
+                    ['insertImage'],
+                    ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+                    ['unorderedList', 'orderedList'],
+                    ['horizontalRule'],
+                    ['removeformat'],
 
-      <div>
-        <h2>Events</h2>
-        <ul>
-          <li><a href="./html/events/blur_focus.html" title="Blur / Focus">Blur / Focus</a></li>
-          <li><a href="./html/events/content_changed.html" title="Content Changed">Content Changed</a></li>
-          <li><a href="./html/events/drop.html" title="Drop">Drop</a></li>
-          <li><a href="./html/events/image_removed.html" title="Image Removed">Image Removed</a></li>
-          <li><a href="./html/events/initialized_destroy.html" title="Initialized / Destroy">Initialized / Destroy</a></li>
-        </ul>
-      </div>
+                    ['upload', 'base64', 'noembed'],
+                    ['ruby'],
+                    ['foreColor', 'backColor'],
+                    ['preformatted'],
+                    ['template'],
+                    ['fullscreen', 'close']
+                ],
+                plugins: {
+                    upload: uploadOptions,
+                    templates: [
+                        {
+                            name: 'Template 1',
+                            html: '<p>I am a template!</p>'
+                        },
+                        {
+                            name: 'Template 2',
+                            html: '<p>I am a different template!</p>'
+                        }
+                    ]
+                }
+            });
 
-      <div>
-        <h2>Images</h2>
-        <ul>
-          <li><a href="./html/image/custom_button.html" title="Custom Image Button">Custom Image Button</a></li>
-          <li><a href="./html/image/image_styles.html" title="Image Styles">Image Styles</a></li>
-          <li><a href="./html/image/default_width.html" title="Default Width">Default Width</a></li>
-          <li><a href="./html/image/insert_base64.html" title="Insert as Base64">Insert as Base64</a></li>
-        </ul>
-      </div>
 
-      <div>
-        <h2>Init inside iframe</h2>
-        <ul>
-          <li><a href="./html/init_inside_iframe/basic.html" title="Basic Editor inside iframe">Basic Editor</a></li>
-          <li><a href="./html/init_inside_iframe/inline.html" title="Inline Editor inside iframe">Inline Editor</a></li>
-        </ul>
-      </div>
+            /********************************************************
+             * Customized button pane + buttons groups + dropdowns
+             * Use upload and base64 plugins
+             *******************************************************/
 
-      <div>
-        <h2>Init on click</h2>
-        <ul>
-          <li><a href="./html/init_on_click/basic.html" title="Basic Editor">Basic Editor</a></li>
-          <li><a href="./html/init_on_click/inline.html" title="Inline Editor">Inline Editor</a></li>
-          <li><a href="./html/init_on_click/two_editors.html" title="2 Editors">2 Editors</a></li>
-        </ul>
-      </div>
+            /* Add new words for customs btnsDef just below */
+            $.extend(true, $.trumbowyg.langs, {
+                fr: {
+                    align: 'Alignement',
+                    image: 'Image'
+                }
+            });
+            var customizedButtonPaneTbwOptions = {
+                lang: 'fr',
+                fixedBtnPane: true,
+                semantic: false,
+                btnsDef: {
+                    // Customizable dropdowns
+                    align: {
+                        dropdown: ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+                        ico: 'justifyLeft'
+                    },
+                    image: {
+                        dropdown: ['insertImage', 'upload', 'base64', 'noembed'],
+                        ico: 'insertImage'
+                    }
+                },
+                btns: [
+                    ['viewHTML'],
+                    ['formatting'],
+                    ['bold', 'italic', 'strikethrough'],
+                    ['link'],
+                    ['align'],
+                    ['image'],
+                    ['foreColor', 'backColor'],
+                    ['preformatted'],
+                    ['fullscreen', 'close']
+                ],
+                changeActiveDropdownIcon: true,
+                minimalLinks: true,
+                defaultLinkTarget: '_blank',
+                plugins: {
+                    upload: uploadOptions
+                }
+            };
+            $('#customized-buttonpane')
+            .trumbowyg(customizedButtonPaneTbwOptions)
+            .on('dblclick', function(){
+                $(this).trumbowyg(customizedButtonPaneTbwOptions);
+            });
 
-      <div>
-        <h2>Initialization</h2>
-        <ul>
-          <li><a href="./html/initialization/init_on_click.html" title="Init on click">Init on Click</a></li>
-          <li><a href="./html/initialization/init_on_button.html" title="Init on Button">Init on Button</a></li>
-          <li><a href="./html/initialization/init_on_link.html" title="Init on Link">Init on Link</a></li>
-          <li><a href="./html/initialization/init_on_image.html" title="Init on Image">Init on Image</a></li>
-          <li><a href="./html/initialization/init_on_h1.html" title="Init on H1">Init on H1</a></li>
-          <li><a href="./html/initialization/initialized_event.html" title="Initialized Event">Initialized Event</a></li>
-          <li><a href="./html/initialization/edit_in_popup.html" title="Edit in Popup">Edit in Popup</a></li>
-        </ul>
-      </div>
 
-      <div>
-        <h2>Links</h2>
-        <ul>
-          <li><a href="./html/link/link_styles.html" title="Link Styles">Link Styles</a></li>
-          <li><a href="./html/link/predefined_links.html" title="Predefined Links">Predefined Links</a></li>
-          <li><a href="./html/link/custom_validation.html" title="Custom Link Validation">Custom Link Validation</a></li>
-        </ul>
-      </div>
 
-      <div>
-        <h2>Plugins</h2>
-        <ul>
-          <li><a href="./html/plugins/line_breaker.html" title="Line Breaker">Line Breaker</a></li>
-          <li><a href="./html/plugins/quick_insert.html" title="Quick Insert">Quick Insert</a></li>
-          <li><a href="./html/plugins/char_counter.html" title="Char Counter">Char Counter</a></li>
-          <li><a href="./html/plugins/full_screen.html" title="Full Screen">Full Screen</a></li>
-        </ul>
-      </div>
+            /** Simple customization with current options **/
+            var formTbwOptions = {
+                lang: 'fr',
+                mobile: true,
+                fixedBtnPane: true,
+                fixedFullWidth: true,
+                semantic: true,
+                resetCss: true,
+                removeformatPasted: true,
+                tagsToRemove: ['script', 'style'],
+                imageWidthModalEdit: true,
 
-      <div>
-        <h2>Popups</h2>
-        <ul>
-          <li><a href="./html/popups/colors.html" title="Custom Color Picker">Custom Color Picker</a></li>
-          <li><a href="./html/popups/emoticons.html" title="Custom Emoticons">Custom Emoticons</a></li>
-          <li><a href="./html/popups/custom.html" title="Custom Popup">Custom Popup</a></li>
-        </ul>
-      </div>
+                autogrow: true,
+                autogrowOnEnter: true,
 
-      <div>
-        <h2>Styling</h2>
-        <ul>
-          <li><a href="./html/styling/font_family.html" title="Font Family">Font Family</a></li>
-          <li><a href="./html/styling/inline.html" title="Inline Styling">Inline Styling</a></li>
-          <li><a href="./html/styling/paragraph.html" title="Paragraph Styling">Paragraph Styling</a></li>
-          <li><a href="./html/styling/placeholder.html" title="Placeholder">Placeholder</a></li>
-          <li><a href="./html/styling/height.html" title="Predefined Height">Predefined Height</a></li>
-          <li><a href="./html/styling/adjustable_height.html" title="Auto-Adjustable Height">Auto-Adjustable Height</a></li>
-          <li><a href="./html/styling/width.html" title="Predefined Width">Predefined Width</a></li>
-        </ul>
-      </div>
+                btnsDef: {
+                    strong: {
+                        fn: 'bold',
+                        key: 'G'
+                    }
+                }
+            };
+            $('#form-content')
+            .trumbowyg(formTbwOptions)
+            .on('dblclick', function(){
+                $(this).trumbowyg(formTbwOptions);
+            });
 
-      <div>
-        <h2>Themes</h2>
-        <ul>
-          <li><a href="./html/themes/dark.html" title="Dark Theme">Dark Theme</a></li>
-          <li><a href="./html/themes/gray.html" title="Gray Theme">Gray Theme</a></li>
-          <li><a href="./html/themes/royal.html" title="Royal Theme">Royal Theme</a></li>
-        </ul>
-      </div>
 
-      <div>
-        <h2>Table</h2>
-        <ul>
-          <li><a href="./html/table/nested.html" title="Nested Tables">Nested Tables</a></li>
-          <li><a href="./html/table/resize.html" title="Resize Table">Resize Table</a></li>
-          <li><a href="./html/table/insert_helper.html" title="Table Insert Helper">Table Insert Helper</a></li>
-          <li><a href="./html/table/style.html" title="Table Style">Table Style</a></li>
-          <li><a href="./html/table/cell_style.html" title="Table Cell Style">Table Cell Style</a></li>
-        </ul>
-      </div>
 
-      <div>
-        <h2>Toolbar</h2>
-        <ul>
-          <li><a href="./html/toolbar/inline.html" title="Inline Toolbar">Inline Toolbar</a></li>
-          <li><a href="./html/toolbar/sticky.html" title="Sticky Toolbar">Sticky Toolbar</a></li>
-          <li><a href="./html/toolbar/buttons.html" title="Change Toolbar Buttons">Change Toolbar Buttons</a></li>
-          <li><a href="./html/toolbar/external.html" title="External Shared Toolbar">External Shared Toolbar</a></li>
-          <li><a href="./html/toolbar/external_inline.html" title="External Shared Inline Toolbar">External Shared Inline Toolbar</a></li>
-          <li><a href="./html/toolbar/bottom.html" title="Toolbar Bottom">Toolbar Bottom</a></li>
-          <li><a href="./html/toolbar/offset.html" title="Toolbar with Offset">Toolbar with Offset</a></li>
-          <li><a href="./html/toolbar/bottom_offset.html" title="Toolbar Bottom">Toolbar Bottom with Offset</a></li>
-          <li><a href="./html/toolbar/show_selection.html" title="Show Selection Details">Show Selection Details</a></li>
-          <li><a href="./html/toolbar/inline_selection.html" title="Inline Toolbar without Selection">Inline Toolbar without Selection</a></li>
-        </ul>
-      </div>
+            /** Dynamic Iframe **/
 
-      <div>
-        <h2>Paragraph Modes</h2>
-        <ul>
-          <li><a href="./html/paragraph_modes/enter_br.html" title="Enter BR">Enter BR</a></li>
-          <li><a href="./html/paragraph_modes/enter_div.html" title="Enter DIV">Enter DIV</a></li>
-          <li><a href="./html/paragraph_modes/enter_p.html" title="Enter P">Enter P</a></li>
-        </ul>
-      </div>
+            // Create the iframe element.
+            var $iframe = $('<iframe/>').css({
+                width: '100%',
+                height: 400,
+                border: 0
+            });
+            $('#dynamic-iframe-example').append($iframe);
+            // Get the document of the iframe.
+            var $editor = $('<div>', {
+                    id: 'editor'
+                }).html(
+                      '<h2>This is within an iframe</h2> <p>Soc'
+                    + 'tempor pulvinar ac ultricies, placerat in, elementum,'
+                    + 'adipiscing pid, mid augue pulvinar eros nisi! In magn'
+                    + 'magnis. Porttitor platea turpis nisi. Pulvinar massa,'
+                    + ' habitasse <strong>a nunc rhoncus adipiscing</strong></p>');
 
-      <div>
-        <h2>Misc</h2>
-        <ul>
-          <li><a href="./html/misc/scrollable_container.html" title="Scrollable Container">Scrollable Container</a></li>
-          <li><a href="./html/misc/scrollable_container_inline.html" title="Scrollable Container Inline Editor">Scrollable Container Inline</a></li>
-        </ul>
-      </div>
+            setTimeout(function(){
+                var contextIframe = $iframe.contents()[0];
+                // Set the style on the head of the iframe.
+                $('head', contextIframe).append($('<link>', {
+                    href: '/dist/ui/trumbowyg.css',
+                    rel: 'stylesheet'
+                }));
+                // Set the content to be editable.
+                $('body', contextIframe).append($editor);
 
-      <div>
-        <h2>Typing</h2>
-        <ul>
-          <li><a href="./html/typing/tab.html" title="TAB Key">TAB Key</a></li>
-          <li><a href="./html/typing/shortcuts.html" title="Shortcuts">Shortcuts</a></li>
-          <li><a href="./html/typing/keep_format.html" title="Keep Format on Delete">Keep Format on Delete</a></li>
-        </ul>
-      </div>
+                $editor
+                .trumbowyg()
+                .on('dblclick', function(){
+                    $(this).trumbowyg();
+                });
+            }, 500);
 
-      <div>
-        <h2>Paste</h2>
-        <ul>
-          <li><a href="./html/paste/plain.html" title="Plain Paste">Plain Paste</a></li>
-          <li><a href="./html/paste/attrs.html" title="Allowed / Denied Attributes">Allowed / Denied Attributes</a></li>
-          <li><a href="./html/paste/tags.html" title="Allowed / Denied Tags">Allowed / Denied Tags</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</body>
+
+            /** Editor with placeholder **/
+            $('#placeholder-editor')
+            .trumbowyg({
+              autogrowOnEnter: true,
+            })
+            .on('dblclick', function(){
+                $(this).trumbowyg();
+            })
+            .on('tbwfocus', function(){
+                console.log('focus event fired');
+            })
+            .on('tbwblur', function(){
+                console.log('blur event fired');
+            });
+        </script>
+    </body>
+</html>
